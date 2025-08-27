@@ -1,0 +1,47 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-regular);
+    
+
+    @include mobile {
+        gap: rem(14);
+    }
+
+    &__title {
+        font-family: var(--font-family-bold);
+        font-weight: 600;
+    }
+
+    &__subtitle {
+        margin-block-end: rem(62);
+        font-weight: 400;
+        color: var(--color-gray-70);
+        text-align: center;
+
+        @include mobile {
+            margin-block-end: rem(10);
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(40);
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(24) rem(16);
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+            gap: rem(24) rem(16);
+        }
+
+        
+    }
+}

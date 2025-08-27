@@ -1,0 +1,30 @@
+.soc1als {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(20);
+
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(40);
+        height: rem(40);
+        background-color: var(--color-gray-opacity);
+        color: var(--color-gray-70);
+        border: var(--border);
+        border-radius: 50%;
+
+        &:hover {
+            color: var(--color-accent);
+            border: var(--border-accent);
+        }
+
+        & svg {
+            width: rem(18);
+            height: rem(18);
+        }
+    }
+        
+}

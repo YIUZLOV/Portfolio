@@ -1,0 +1,97 @@
+.about-me {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+    align-items: center;
+    font-family: var(--font-family-regular);
+
+    @include mobile {
+        gap: rem(14);
+    }
+
+    &__title {
+        font-family: var(--font-family-bold);
+    }
+
+    &__subtitle {
+        margin-block-end: rem(22);
+        font-weight: 400;
+        color: var(--color-gray-70);
+
+        @include mobile {
+            margin-block-end: rem(52);
+        }
+    }
+
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(50);
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        flex-grow: 1;
+        max-height: rem(781);
+        filter: grayscale(100%);
+        border-radius: rem(50);
+
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: rem(40);
+        color: var(--color-gray-70);
+        align-items: center;
+
+        @include mobile {
+            gap: rem(24);
+            width: 90%;
+        }
+
+        @include mobile-s {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: rem(50);
+        line-height: 190%;
+    }
+
+    &__button {
+        width: min-content;
+    }
+
+    &__skills {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: rem(70);
+        
+        margin-block-start: rem(82);
+        @include mobile {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-block-start: rem(52);
+        }
+
+        @include mobile-s {
+            column-gap: 0;
+            row-gap: rem(40);
+        }
+    }
+}

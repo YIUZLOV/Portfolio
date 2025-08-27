@@ -1,0 +1,145 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(110);
+    margin-block-end: rem(150);
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+        gap: rem(24);
+        margin-block-end: rem(100);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: rem(24);
+        background-image: url('../../Images/background-hero.png');
+        background-position: 0 rem(-50);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include tablet {
+            align-items: center;
+            background-position: center rem(-50);
+        }
+    }
+
+    &__description {
+        font-family: var(--font-family-bold);
+
+        @include tablet {
+        text-align: center;
+    }
+
+        & p {
+            &:first-child {
+                margin-bottom: rem(10);
+                color: var(--color-gray-70);
+            }
+
+            &:last-child {
+                color: var(--color-gray-95);
+            }
+        }
+    }
+
+    &__title {
+        margin-block-end: rem(10);
+        font-family: var(--font-family-black);
+        background: var(--gradient-text);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+
+        @include tablet {
+            margin-block-end: rem(5);
+            text-align: center;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: rem(24);
+        margin-block-start: rem(37);
+
+        @include tablet {
+            margin-block-start: rem(15);
+        }
+    }
+
+    &__achievements {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-block-start: rem(56);
+        padding: 24px;
+        background-color: var(--color-gray-opacity);
+        border-radius: rem(8);
+        color: var(--color-light);
+        font-family: var(--font-family-bold);
+        font-weight: 600;
+
+        @include tablet {
+            margin-block-start: rem(26);
+        }
+
+        @include mobile {
+            flex-direction: column;
+            width: 80%;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: rem(12);
+
+            @include mobile-above {
+                &:not(:last-child) {
+                    padding-inline-end: rem(30);
+                    border-inline-end: var(--border);
+                }
+
+                &:not(:first-child) {
+                    padding-inline-start: rem(30);
+                }
+            }
+
+            @include mobile {
+                align-items: center;
+
+                &:not(:last-child) {
+                    padding-block-end: rem(30);
+                    border-block-end: var(--border);
+                }
+
+                &:not(:first-child) {
+                    padding-block-start: rem(30);
+                }
+            }
+        }
+
+        &__value {
+            
+            color: var(--color-accent);
+        }
+    }
+
+    &__image {
+        max-height: rem(781);
+        filter: grayscale(100%);
+        border-radius: rem(50);
+
+        @include tablet {
+            display: none;
+            max-height: rem(511);
+        }
+    }
+}
+

@@ -1,0 +1,51 @@
+
+
+.circular-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(8);
+    padding-inline: rem(35);
+    font-family: var(--font-family-bold);
+    font-weight: 600;
+    color: var(--color-gray-95);
+
+    &__diagramm {
+        width: rem(130);
+        height: rem(130);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: background 0.5s ease-in-out;
+
+        @include mobile {
+        width: rem(100);
+        height: rem(100);
+        }
+
+        &-inner {
+            background: var(--color-dark);
+            border-radius: 50%;
+            height: calc(100% - 30px);
+            width: calc(100% - 30px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+
+            @include mobile {
+                height: calc(100% - 20px);
+                width: calc(100% - 20px);
+            }
+        }
+    }
+
+    &__percent {
+        margin-block-start: rem(16);
+        color: var(--color-accent);
+    }
+}

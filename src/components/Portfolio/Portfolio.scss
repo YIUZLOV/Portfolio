@@ -1,0 +1,68 @@
+.portfolio {
+    display: grid;
+    gap: rem(70);
+    overflow: hidden;
+
+    &__title {
+        align-self: center;
+        justify-self: center;
+        font-family: var(--font-family-bold);
+        font-weight: 600;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(40);
+        transition: transform 0.3s ease-in-out;
+
+        & * {
+            justify-self: stretch;
+        }
+
+        @include laptop-above {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mobile {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+
+    &__controls {
+        display: none;
+
+        @include mobile {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            gap: rem(20);
+            top: rem(-30);
+            left: rem(20);
+            right: rem(20);
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+    }
+
+    &__button {
+        background-color: var(--color-gray-70);
+        cursor: pointer;
+        pointer-events: all;
+        transition: opacity 0.3s;
+
+        &[disabled] {
+        opacity: 0.3;
+        cursor: not-allowed;
+        }
+    }
+
+
+
+}

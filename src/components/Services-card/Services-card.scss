@@ -1,0 +1,31 @@
+.services__card {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-gray-opacity);
+    border-radius: rem(24);
+    padding: rem(34);
+    text-align: center;
+
+    & svg {
+        color: var(--color-accent);
+    }
+
+    &__title {
+        margin-block-end: rem(16);
+        font-family: var(--font-family-bold);
+        font-weight: 600;
+        color: var(--color-accent);
+    }
+
+    &__description {
+        color: var(--color-gray-70);
+    }
+
+    &__quote {
+        color: var(--color-accent);
+        text-wrap: balance;
+    }
+}
