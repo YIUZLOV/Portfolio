@@ -1,0 +1,18 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  base: '/portfolio/', 
+  build: {
+    outDir: 'dist'
+  },
+  plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import '../App/App.scss';`,
+      },
+    },
+  },
+})
