@@ -1,6 +1,7 @@
 import './Hero.scss'
 import { Soc1als } from '../Soc1als/Soc1als'
 import hero from '../../Images/hero-image.jpg'
+import heroAlternative from '../../Images/hero-imageWebP.webp'
 import { scrollToSection } from '../../utils/scroll'
 
 export const Hero = () => {
@@ -33,13 +34,17 @@ export const Hero = () => {
                     </div>
                 </div>
             </div>
-                <img className="hero__image"
+            <picture className="hero__image">
+                <source srcset={heroAlternative} type="image/webp" />
+                <img
                     src={hero} 
-                    alt="" 
+                    alt="Обложка для блока Hero" 
                     width='618' 
                     height='781' 
                     loading='lazy'
                 />
+            </picture>
+                
         </div>
     )
 }

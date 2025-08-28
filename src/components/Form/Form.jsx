@@ -11,7 +11,6 @@ const sendEmail = (data) => {
         'eJeD0ObxksisVxxiF'
     );
 };
-// eJeD0ObxksisVxxiF
 
 export const Form = () => {
     const {
@@ -36,7 +35,6 @@ export const Form = () => {
             reset();
             } catch (error) {
                 setErrorMessage('Ошибка при отправке: ' + error.text);
-                // console.log(error.text);
             } finally {
                 setIsLoading(false);
             }
@@ -112,7 +110,6 @@ export const Form = () => {
                     {...register('phone', {
                         required: 'Обязательное поле',
                         pattern: {
-                        // value: /^\+7\s?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/,
                         value: /^(?:\+7|8)[\s\-()]*\d{3,5}[\s\-()]*\d{3}[\s\-()]*\d{2}[\s\-()]*\d{2}$/,
                         message: 'Некорректный формат номера'
                         }

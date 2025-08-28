@@ -1,5 +1,6 @@
 import './AboutMe.scss'
 import hero from '../../Images/hero-wrapper.jpg'
+import heroAlternative from '../../Images/hero-wrapperWebP.webp'
 import { CircularProgress } from '../CircularProgress/CircularProgress'
 import { scrollToSection } from '../../utils/scroll'
 
@@ -43,13 +44,17 @@ export const AboutMe = () => {
             <h2 className="about-me__title">Обо мне</h2>
             <p className="h6 about-me__subtitle">«Каждый проект — это новая история, которую я создаю вместе с вами»</p>
             <div className="about-me__info">
-                <img className="about-me__image"
-                    src={hero} 
-                    alt="" 
-                    width='618' 
-                    height='781' 
-                    loading='lazy'
-                />
+                <picture className="about-me__image">
+                    <source srcset={heroAlternative} type="image/webp" />
+                    <img
+                        src={hero} 
+                        alt="" 
+                        width='618' 
+                        height='781' 
+                        loading='lazy'
+                    />
+                </picture>
+                
                 <div className='about-me__content'>
                     <p className=' h6 about-me__description'>
                         <span>

@@ -2,17 +2,23 @@ import { useState } from 'react';
 import './Portfolio.scss';
 import { PortfolioCard } from '../Portfolio-card/Portfolio-card';
 import wrapperFutureTech from '../../Images/portfolio/FutureTech1.jpg'
+import wrapperFutureTechAlternative from '../../Images/portfolio/webp/FutureTech1.webp'
 import wrapperColorsMarket from '../../Images/portfolio/ColorsMarket.jpg'
+import wrapperColorsMarketAlternative from '../../Images/portfolio/webp/ColorsMarket.webp'
 import wrapperCoffeTime from '../../Images/portfolio/CofeeTime.jpg'
+import wrapperCoffeTimeAlternative from '../../Images/portfolio/webp/CofeeTime.webp'
 import wrapperPersonalSite from '../../Images/portfolio/PersonalSite.jpg'
+import wrapperPersonalSiteAlternative from '../../Images/portfolio/webp/PersonalSite.webp'
 import wrapperChessClub from '../../Images/portfolio/ChessClub.jpg'
-import wrapper from '../../Images/portfolio/Обложка.jpg'
-
+import wrapperChessClubAlternative from '../../Images/portfolio/webp/ChessClub.webp'
+import wrapper from '../../Images/portfolio/wrapper.jpg'
+import wrapperAlternative from '../../Images/portfolio/webp/wrapper.webp'
 
 const projects = [
     {
         id: 1, 
-        image: wrapperFutureTech, 
+        image: wrapperFutureTech,
+        imageAlternative: wrapperFutureTechAlternative,
         title: 'Сайт для IT-компании', 
         categoty: 'Corporate Website', 
         description: 'Многостраничный сайт разработанный для международной IT-компании. На сайте имеются такие элементы как: форма обратной связи, блог, отзывы, галерея и видео.', 
@@ -20,14 +26,16 @@ const projects = [
     },
     {
         id: 2, 
-        image: wrapperColorsMarket, 
+        image: wrapperColorsMarket,
+        imageAlternative: wrapperColorsMarketAlternative,
         title: 'Интернет-магазин для дизайна', 
         categoty: 'Online Store', 
         description: 'Интернет-магазин товаров для ремонта/обустройства помещений. Разные категории товаров. Имеется фильтрация товаров по категориям, новинкам, наличию. Сортировка по цене, остаткам. Корзина товаров с полным функционалом.', 
         stack: 'HTML, CSS, SASS, JS'},
     {
         id: 3, 
-        image: wrapperCoffeTime, 
+        image: wrapperCoffeTime,
+        imageAlternative: wrapperCoffeTimeAlternative,
         title: 'Сайт-визитка кофейни', 
         categoty: 'Business Card Website', 
         description: 'Сайт-визитка для кофейни. Представляет информацию о самой кофейне, а так же содержит ассортимент продукции', 
@@ -35,7 +43,8 @@ const projects = [
     },
     {
         id: 4, 
-        image: wrapperPersonalSite, 
+        image: wrapperPersonalSite,
+        imageAlternative: wrapperPersonalSiteAlternative,
         title: 'Сайт-визитка разработчика', 
         categoty: 'Business Card Website', 
         description: 'Сайт-визитка Frontend-разработчика. Сайт наполнен интерактивными элементами, карточками портфолио, информацией о самом разработчике. Так же имеется форма обратной связи.', 
@@ -43,7 +52,8 @@ const projects = [
     },
     {
         id: 5, 
-        image: wrapperChessClub, 
+        image: wrapperChessClub,
+        imageAlternative: wrapperChessClubAlternative,
         title: 'Сайт-визитка шахматного клуба', 
         categoty: 'Business Card Website', 
         description: 'Сайт-визитка шахматного клуба, информирует посетителей о ближайшем мероприятии. Так же имеется информация о выдающихся представителях этой игры. На сайте реализованы такие элемены как: 2 различных карусели, бегущая строка.', 
@@ -51,7 +61,8 @@ const projects = [
     },
     {
         id: 6, 
-        image: wrapper, 
+        image: wrapper,
+        imageAlternative: wrapperAlternative,
         title: 'Ваш крутой проект!', 
         categoty: 'Lending', 
         description: 'Тут может оказаться Ваш проект. Оставляйте заявку и получите уникальный, продающий, адаптивный и просто красивый сайт!', 
@@ -85,6 +96,7 @@ export const Portfolio = () => {
                         <PortfolioCard
                             key={project.id}
                             image={project.image}
+                            imageAlternative={project.imageAlternative}
                             title={project.title}
                             category={project.categoty}
                             description={project.description}
