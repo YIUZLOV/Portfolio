@@ -9,6 +9,7 @@
 
     @include mobile {
         min-width: 100%;
+        height: rem(485);
     }
 
     &__inner,

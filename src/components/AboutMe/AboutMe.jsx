@@ -44,9 +44,10 @@ export const AboutMe = () => {
             <h2 className="about-me__title">Обо мне</h2>
             <p className="h6 about-me__subtitle">«Каждый проект — это новая история, которую я создаю вместе с вами»</p>
             <div className="about-me__info">
-                <picture className="about-me__image">
+                <picture>
                     <source srcset={heroAlternative} type="image/webp" />
-                    <img
+                    <img 
+                        className="about-me__image"
                         src={hero} 
                         alt="" 
                         width='618' 

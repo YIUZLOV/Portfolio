@@ -21,9 +21,14 @@ export const PortfolioCard = ({
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className={`card__inner ${isHovered ? 'fade-out' : 'fade-in'}`}>
-                <picture className='card__image'>
+                <picture>
                     <source srcset={imageAlternative} type="image/webp" />
-                    <img  src={image} alt="Обложка проекта" loading='lazy'/>
+                    <img 
+                        className='card__image' 
+                        src={image} 
+                        alt="Обложка проекта" 
+                        loading='lazy'
+                    />
                 </picture>
                 <div className='card__description'>
                     <p className='card__title'>{title}</p>

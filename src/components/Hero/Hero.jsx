@@ -34,9 +34,10 @@ export const Hero = () => {
                     </div>
                 </div>
             </div>
-            <picture className="hero__image">
+            <picture>
                 <source srcset={heroAlternative} type="image/webp" />
                 <img
+                    className="hero__image"
                     src={hero} 
                     alt="Обложка для блока Hero" 
                     width='618' 
